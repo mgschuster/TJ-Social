@@ -18,6 +18,7 @@
 		84F377141F41EC4D00F05787 /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F377131F41EC4D00F05787 /* RoundBtn.swift */; };
 		84F377161F41EDF700F05787 /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F377151F41EDF700F05787 /* FancyField.swift */; };
 		84F377181F41EF2700F05787 /* FancyBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F377171F41EF2700F05787 /* FancyBtn.swift */; };
+		84F3771D1F42365C00F05787 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3771C1F42365C00F05787 /* FeedVC.swift */; };
 		A1493C1A42F3A65EE22CFA00 /* Pods_TJSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C53B81B7AAB2E79B9FB30BC /* Pods_TJSocial.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		84F377131F41EC4D00F05787 /* RoundBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
 		84F377151F41EDF700F05787 /* FancyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
 		84F377171F41EF2700F05787 /* FancyBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyBtn.swift; sourceTree = "<group>"; };
+		84F3771C1F42365C00F05787 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				84F376F91F41D3B300F05787 /* SignInVC.swift */,
+				84F3771C1F42365C00F05787 /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -232,6 +236,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +288,7 @@
 				84F376FA1F41D3B300F05787 /* SignInVC.swift in Sources */,
 				84F377141F41EC4D00F05787 /* RoundBtn.swift in Sources */,
 				84F376F81F41D3B300F05787 /* AppDelegate.swift in Sources */,
+				84F3771D1F42365C00F05787 /* FeedVC.swift in Sources */,
 				84F3770F1F41E9FB00F05787 /* FancyView.swift in Sources */,
 				84F377121F41EA9F00F05787 /* Constants.swift in Sources */,
 				84F377181F41EF2700F05787 /* FancyBtn.swift in Sources */,
