@@ -38,7 +38,6 @@ class SignInVC: UIViewController {
                 self.firebaseAuth(credential)
             }
         }
-        
     }
     
     func firebaseAuth(_ credential: AuthCredential) {
@@ -50,6 +49,4 @@ class SignInVC: UIViewController {
             }
         }
     }
-
 }
-
