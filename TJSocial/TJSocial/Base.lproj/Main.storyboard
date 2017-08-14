@@ -72,6 +72,9 @@
                                     <constraint firstAttribute="height" constant="120" id="N6l-13-AXG"/>
                                 </constraints>
                                 <state key="normal" image="f"/>
+                                <connections>
+                                    <action selector="facebookBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nD4-fj-Wtr"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="1tT-Fj-eyT">
                                 <rect key="frame" x="46" y="355" width="228" height="97"/>
@@ -121,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="15.199999999999999" y="111.99400299850076"/>
+            <point key="canvasLocation" x="191" y="123"/>
         </scene>
     </scenes>
     <resources>
