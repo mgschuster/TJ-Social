@@ -17,11 +17,5 @@ class FeedVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
-    @IBAction func signOutTapped(_ sender: Any) {
-        KeychainWrapper.standard.removeObject(forKey: KEY_UID)
-        try! Auth.auth().signOut()
-        performSegue(withIdentifier: "goToSignIn", sender: nil)
-    }
 
 }
