@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		844727DC1F43297D008987EE /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844727DB1F43297D008987EE /* CircleView.swift */; };
 		844727DE1F433499008987EE /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844727DD1F433499008987EE /* PostCell.swift */; };
+		844727E11F4341CD008987EE /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844727E01F4341CD008987EE /* DataService.swift */; };
 		84F376F81F41D3B300F05787 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F376F71F41D3B300F05787 /* AppDelegate.swift */; };
 		84F376FA1F41D3B300F05787 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F376F91F41D3B300F05787 /* SignInVC.swift */; };
 		84F376FD1F41D3B300F05787 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F376FB1F41D3B300F05787 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 		65A60E43B1F6DFDF71A054A3 /* Pods-TJSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TJSocial.release.xcconfig"; path = "Pods/Target Support Files/Pods-TJSocial/Pods-TJSocial.release.xcconfig"; sourceTree = "<group>"; };
 		844727DB1F43297D008987EE /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		844727DD1F433499008987EE /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		844727E01F4341CD008987EE /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		84F376F41F41D3B300F05787 /* TJSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TJSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F376F71F41D3B300F05787 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84F376F91F41D3B300F05787 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -66,6 +68,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		844727DF1F4341B1008987EE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				844727E01F4341CD008987EE /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		84F376EB1F41D3B200F05787 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +97,7 @@
 		84F376F61F41D3B300F05787 /* TJSocial */ = {
 			isa = PBXGroup;
 			children = (
+				844727DF1F4341B1008987EE /* Services */,
 				84F377101F41EA8B00F05787 /* Utilities */,
 				84F3770B1F41D8BB00F05787 /* Model */,
 				84F3770D1F41D8C700F05787 /* Controller */,
@@ -295,6 +306,7 @@
 				84F376FA1F41D3B300F05787 /* SignInVC.swift in Sources */,
 				84F377141F41EC4D00F05787 /* RoundBtn.swift in Sources */,
 				84F376F81F41D3B300F05787 /* AppDelegate.swift in Sources */,
+				844727E11F4341CD008987EE /* DataService.swift in Sources */,
 				84F3771D1F42365C00F05787 /* FeedVC.swift in Sources */,
 				84F3770F1F41E9FB00F05787 /* FancyView.swift in Sources */,
 				84F377121F41EA9F00F05787 /* Constants.swift in Sources */,
