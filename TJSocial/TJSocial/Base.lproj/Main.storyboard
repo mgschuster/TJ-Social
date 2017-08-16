@@ -104,6 +104,12 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Df-mF-wHs">
+                                <rect key="frame" x="160.5" y="458" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="9"/>
+                                <color key="textColor" red="0.86666666670000003" green="0.17254901959999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -113,6 +119,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4ZZ-Ku-b5n" secondAttribute="bottom" id="FgK-sK-1wV"/>
                             <constraint firstItem="1tT-Fj-eyT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="Gxy-iP-yyq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lD0-eW-OmC" secondAttribute="trailing" id="Ixf-a5-Quy"/>
+                            <constraint firstItem="7Df-mF-wHs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JPI-K3-Tnh"/>
                             <constraint firstItem="lD0-eW-OmC" firstAttribute="top" secondItem="Csw-go-hhF" secondAttribute="bottom" constant="20" id="LNL-XQ-fLT"/>
                             <constraint firstItem="Csw-go-hhF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Nnx-zy-uKV"/>
                             <constraint firstAttribute="trailing" secondItem="4ZZ-Ku-b5n" secondAttribute="trailing" id="OSn-sO-H1O"/>
@@ -120,12 +127,14 @@
                             <constraint firstItem="PYH-fL-unc" firstAttribute="top" secondItem="lD0-eW-OmC" secondAttribute="bottom" constant="20" id="ctd-yo-2hE"/>
                             <constraint firstAttribute="trailing" secondItem="Csw-go-hhF" secondAttribute="trailing" id="dV1-f9-mks"/>
                             <constraint firstItem="Csw-go-hhF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="drf-ED-22f"/>
+                            <constraint firstItem="7Df-mF-wHs" firstAttribute="top" secondItem="1tT-Fj-eyT" secondAttribute="bottom" constant="6" id="mdO-nR-7dX"/>
                             <constraint firstItem="lD0-eW-OmC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ubW-fu-qe5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1tT-Fj-eyT" secondAttribute="trailing" constant="30" id="ycO-8i-ZBe"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="emailField" destination="mAH-HA-ube" id="XQw-qK-Gea"/>
+                        <outlet property="emailWarning" destination="7Df-mF-wHs" id="LF9-b3-K9d"/>
                         <outlet property="psswdField" destination="r8S-oo-HJc" id="eEi-wR-qTF"/>
                         <segue destination="Nif-PC-MQk" kind="show" identifier="goToFeed" id="FDf-hl-Ly0"/>
                     </connections>
@@ -211,7 +220,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="315" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YIU-4n-4qU">
-                                <rect key="frame" x="0.0" y="152" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="164" width="320" height="404"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="315" id="PlM-ul-TYZ" customClass="PostCell" customModule="TJSocial" customModuleProvider="target">
@@ -324,17 +333,25 @@
                                     <outletCollection property="gestureRecognizers" destination="XSK-Dh-dFG" appends="YES" id="5jo-XW-ZQf"/>
                                 </connections>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Warning Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERE-PE-czQ">
+                                <rect key="frame" x="123.5" y="148" width="74.5" height="12.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="9"/>
+                                <color key="textColor" red="0.86666666670000003" green="0.17254901959999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.81176470590000005" green="0.84705882349999995" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="YIU-4n-4qU" secondAttribute="trailing" id="6XG-CL-yPl"/>
-                            <constraint firstItem="YIU-4n-4qU" firstAttribute="top" secondItem="Joj-QL-uIz" secondAttribute="bottom" constant="8" id="BGN-vg-8cg"/>
+                            <constraint firstItem="YIU-4n-4qU" firstAttribute="top" secondItem="Joj-QL-uIz" secondAttribute="bottom" constant="20" id="BGN-vg-8cg"/>
                             <constraint firstItem="YIU-4n-4qU" firstAttribute="leading" secondItem="MaH-29-SSa" secondAttribute="leading" id="d2y-an-drW"/>
                             <constraint firstItem="AXT-u9-UCC" firstAttribute="leading" secondItem="MaH-29-SSa" secondAttribute="leading" constant="16" id="d79-rJ-VoB"/>
                             <constraint firstItem="Joj-QL-uIz" firstAttribute="top" secondItem="bFF-KO-LjK" secondAttribute="bottom" constant="14" id="eNd-Vg-Eia"/>
                             <constraint firstItem="bFF-KO-LjK" firstAttribute="top" secondItem="MaH-29-SSa" secondAttribute="top" id="ePO-CY-rDg"/>
+                            <constraint firstItem="ERE-PE-czQ" firstAttribute="top" secondItem="Joj-QL-uIz" secondAttribute="bottom" constant="4" id="eS5-6t-flu"/>
                             <constraint firstItem="bFF-KO-LjK" firstAttribute="leading" secondItem="MaH-29-SSa" secondAttribute="leading" id="fpg-3z-TZK"/>
                             <constraint firstItem="NSd-TF-X64" firstAttribute="top" secondItem="YIU-4n-4qU" secondAttribute="bottom" id="hNx-Ag-Dvs"/>
+                            <constraint firstItem="ERE-PE-czQ" firstAttribute="centerX" secondItem="MaH-29-SSa" secondAttribute="centerX" id="hOJ-DZ-Ej3"/>
                             <constraint firstAttribute="trailing" secondItem="Joj-QL-uIz" secondAttribute="trailing" constant="16" id="j5V-yP-ARU"/>
                             <constraint firstItem="AXT-u9-UCC" firstAttribute="top" secondItem="uxZ-nn-UpA" secondAttribute="bottom" id="kZW-AV-fnX"/>
                             <constraint firstItem="Joj-QL-uIz" firstAttribute="leading" secondItem="MaH-29-SSa" secondAttribute="leading" constant="16" id="lAm-05-yVo"/>
@@ -346,6 +363,7 @@
                         <outlet property="captionField" destination="Rfh-wV-9bf" id="xul-SQ-n3F"/>
                         <outlet property="imageAdd" destination="wqo-Kh-5Bs" id="bsq-T8-e43"/>
                         <outlet property="tableView" destination="YIU-4n-4qU" id="GkZ-Qy-YoO"/>
+                        <outlet property="warningMessage" destination="ERE-PE-czQ" id="EwU-6z-owx"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="RyN-XE-9hZ"/>
                     </connections>
                 </viewController>

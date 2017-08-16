@@ -15,6 +15,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageAdd: CircleView!
     @IBOutlet weak var captionField: FancyField!
+    @IBOutlet weak var warningMessage: UILabel!
     
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
@@ -93,11 +94,13 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     @IBAction func postBtnTapped(_ sender: Any) {
         guard let caption = captionField.text, caption != "" else {
             print("MITCHELL: Caption must be entered")
+            warningMessage.text = "Caption must be entered"
             return
         }
         
         guard let img = imageAdd.image, imageSelected == true else {
             print("MITCHELL: An image must be selected")
+            warningMessage.text = "An image must be selected"
             return
         }
         
@@ -112,6 +115,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                     print("MITCHELL: Unable to upload image to Firebase storage")
                 } else {
                     print("MITCHELL: Successfully uploaded image to Firebase storage")
+                    self.warningMessage.text = ""
                     let downloadURL = metadata?.downloadURL()?.absoluteString
                 }
             })

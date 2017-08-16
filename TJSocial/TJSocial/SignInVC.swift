@@ -16,6 +16,7 @@ class SignInVC: UIViewController {
     
     @IBOutlet weak var emailField: FancyField!
     @IBOutlet weak var psswdField: FancyField!
+    @IBOutlet weak var emailWarning: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +35,10 @@ class SignInVC: UIViewController {
         facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
             if error != nil {
                 print("MITCHELL Unable to authenticate with Facebook - \(error!)")
+                self.emailWarning.text = "Unable to sign-in with Facebook"
             } else if result?.isCancelled == true {
                 print("MITCHELL User cancelled Facebook authentication")
+                self.emailWarning.text = "User cancelled Facebook authentication"
             } else {
                 print("MITCHELL Successfully authenticated with Facebook")
                 let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
@@ -48,6 +51,7 @@ class SignInVC: UIViewController {
         Auth.auth().signIn(with: credential) { (user, error) in
             if error != nil {
                 print("MITCHELL Unable to authenticate with Firebase = \(error!)")
+                self.emailWarning.text = "Unable to sign-in. Please try again"
             } else {
                 print("MITCHELL Successfully authenticated with Firebase")
                 if let user = user {
@@ -71,8 +75,10 @@ class SignInVC: UIViewController {
                     Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
                         if error != nil {
                             print("MITCHELL: Unable to authenticate with Firebase using email - \(error!)")
+                            self.emailWarning.text = "Unable to sign-in. Password must be 6+ characters"
                         } else {
                             print("MITCHELL: Successfully authenticated with Firebase")
+                            self.emailWarning.text = ""
                             if let user = user {
                                 let userData = ["provider": user.providerID]
                                 self.completeSignIn(id: user.uid, userData: userData)
@@ -90,6 +96,7 @@ class SignInVC: UIViewController {
         
         let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
         print("MITCHELL: Data saved to keychain \(keychainResult)")
+        self.emailWarning.text = ""
         performSegue(withIdentifier: SEGUE_FEED, sender: nil)
     }
 }
