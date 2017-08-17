@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,9 +18,32 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dev-logo" translatesAutoresizingMaskIntoConstraints="NO" id="cFa-fW-228">
+                                <rect key="frame" x="22.5" y="146.5" width="275" height="275"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="275" id="08u-wN-bX0"/>
+                                    <constraint firstAttribute="width" constant="275" id="kRB-PH-e4Y"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dev-banner" translatesAutoresizingMaskIntoConstraints="NO" id="rSa-eg-tQA">
+                                <rect key="frame" x="16" y="70" width="288" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="I61-kJ-1w8"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rSa-eg-tQA" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="50" id="CWI-ME-Jwb"/>
+                            <constraint firstItem="cFa-fW-228" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="W7v-sh-Dyj"/>
+                            <constraint firstItem="rSa-eg-tQA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="c3q-o3-otG"/>
+                            <constraint firstItem="cFa-fW-228" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ciQ-du-yKy"/>
+                            <constraint firstAttribute="trailing" secondItem="rSa-eg-tQA" secondAttribute="trailing" constant="16" id="oBj-tu-oaf"/>
+                            <constraint firstItem="rSa-eg-tQA" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="16" id="svQ-LP-bBW"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +51,8 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dev-banner" width="1000" height="122"/>
+        <image name="dev-logo" width="2500" height="2500"/>
+    </resources>
 </document>
