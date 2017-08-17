@@ -105,7 +105,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Df-mF-wHs">
-                                <rect key="frame" x="160.5" y="458" width="0.0" height="0.0"/>
+                                <rect key="frame" x="160" y="458" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="9"/>
                                 <color key="textColor" red="0.86666666670000003" green="0.17254901959999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -231,13 +231,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xjo-Qs-eNc" customClass="FancyView" customModule="TJSocial" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="8" width="288" height="299"/>
+                                                    <rect key="frame" x="16" y="8" width="343" height="299"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="w7G-PB-cQI">
-                                                            <rect key="frame" x="8" y="8" width="272" height="253"/>
+                                                            <rect key="frame" x="8" y="8" width="327" height="253"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4eN-T1-U22">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="272" height="60"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="60"/>
                                                                     <subviews>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="rm1-fl-8Zy" customClass="CircleView" customModule="TJSocial" customModuleProvider="target">
                                                                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -247,13 +247,13 @@
                                                                             </constraints>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TJSchoost" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0X-0U-i1u">
-                                                                            <rect key="frame" x="60" y="0.0" width="152" height="60"/>
+                                                                            <rect key="frame" x="60" y="0.0" width="207" height="60"/>
                                                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                                                             <color key="textColor" red="0.86666666670000003" green="0.17254901959999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-heart" translatesAutoresizingMaskIntoConstraints="NO" id="vfg-w9-8GK">
-                                                                            <rect key="frame" x="212" y="0.0" width="60" height="60"/>
+                                                                            <rect key="frame" x="267" y="0.0" width="60" height="60"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="60" id="hQI-WW-20T"/>
                                                                                 <constraint firstAttribute="height" constant="60" id="wxC-5z-19W"/>
@@ -262,10 +262,10 @@
                                                                     </subviews>
                                                                 </stackView>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="2Pm-On-Oe9">
-                                                                    <rect key="frame" x="0.0" y="68" width="272" height="127"/>
+                                                                    <rect key="frame" x="0.0" y="68" width="327" height="127"/>
                                                                 </imageView>
                                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="What a picture" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Hgb-jQ-8Uj">
-                                                                    <rect key="frame" x="0.0" y="203" width="272" height="50"/>
+                                                                    <rect key="frame" x="0.0" y="203" width="327" height="50"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="nag-s7-jAJ"/>
@@ -276,7 +276,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ya7-QA-Arf">
-                                                            <rect key="frame" x="201" y="269" width="79" height="22"/>
+                                                            <rect key="frame" x="256" y="269" width="79" height="22"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPu-eq-edw">
                                                                     <rect key="frame" x="0.0" y="0.0" width="36.5" height="22"/>
