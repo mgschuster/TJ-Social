@@ -12,7 +12,7 @@ import FBSDKLoginKit
 import Firebase
 import SwiftKeychainWrapper
 
-class SignInVC: UIViewController {
+class SignInVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailField: FancyField!
     @IBOutlet weak var psswdField: FancyField!
@@ -20,12 +20,20 @@ class SignInVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        emailField.delegate = self
+        psswdField.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
         if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
             performSegue(withIdentifier: SEGUE_FEED, sender: nil)
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 
     @IBAction func facebookBtnTapped(_ sender: Any) {
