@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import SwiftKeychainWrapper
 
-class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageAdd: CircleView!
@@ -31,6 +31,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         imagePicker = UIImagePickerController()
         imagePicker.allowsEditing = true
         imagePicker.delegate = self
+        captionField.delegate = self
         
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
             
@@ -48,6 +49,11 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             }
             self.tableView.reloadData()
         })
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -115,6 +121,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                 } else {
                     print("MITCHELL: Successfully uploaded image to Firebase storage")
                     self.warningMessage.text = ""
+                    self.captionField.resignFirstResponder()
                     let downloadURL = metadata?.downloadURL()?.absoluteString
                     if let url = downloadURL {
                         self.postToFirebase(imgUrl: url)
