@@ -11,6 +11,7 @@
 		844727DE1F433499008987EE /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844727DD1F433499008987EE /* PostCell.swift */; };
 		844727E11F4341CD008987EE /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844727E01F4341CD008987EE /* DataService.swift */; };
 		844727E31F4354A3008987EE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844727E21F4354A3008987EE /* Post.swift */; };
+		844727E51F460077008987EE /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844727E41F460077008987EE /* SettingsVC.swift */; };
 		84F376F81F41D3B300F05787 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F376F71F41D3B300F05787 /* AppDelegate.swift */; };
 		84F376FA1F41D3B300F05787 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F376F91F41D3B300F05787 /* SignInVC.swift */; };
 		84F376FD1F41D3B300F05787 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F376FB1F41D3B300F05787 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 		844727DD1F433499008987EE /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		844727E01F4341CD008987EE /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		844727E21F4354A3008987EE /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		844727E41F460077008987EE /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		84F376F41F41D3B300F05787 /* TJSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TJSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F376F71F41D3B300F05787 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84F376F91F41D3B300F05787 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			children = (
 				84F376F91F41D3B300F05787 /* SignInVC.swift */,
 				84F3771C1F42365C00F05787 /* FeedVC.swift */,
+				844727E41F460077008987EE /* SettingsVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				844727E51F460077008987EE /* SettingsVC.swift in Sources */,
 				844727DC1F43297D008987EE /* CircleView.swift in Sources */,
 				84F377161F41EDF700F05787 /* FancyField.swift in Sources */,
 				84F376FA1F41D3B300F05787 /* SignInVC.swift in Sources */,
