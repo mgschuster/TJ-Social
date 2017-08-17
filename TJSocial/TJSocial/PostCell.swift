@@ -68,7 +68,6 @@ class PostCell: UITableViewCell {
     }
     
     func likeTapped(sender: UITapGestureRecognizer) {
-        let likesRef = DataService.ds.REF_USER_CURRENT.child("likes")
         likesRef.observeSingleEvent(of: .value, with: { (snapshot) in
             if let _ = snapshot.value as? NSNull {
                 self.likesImg.image = UIImage(named: "filled-heart")
