@@ -83,13 +83,14 @@ class SettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     }
     
     func postToFirebase(imgUrl: String) {
-        let post: Dictionary<String, AnyObject> = [
-            "username": usernameTxt.text! as AnyObject,
-            "profile-pic": imgUrl as AnyObject,
+        let id = DataService.ds.REF_USER_CURRENT.key
+        
+        let post: Dictionary<String, String> = [
+            "username": usernameTxt.text! as String,
+            "profile-pic": "\(imgUrl)" as String,
         ]
         
-        let firebasePost = DataService.ds.REF_USERS.childByAutoId()
-        firebasePost.setValue(post)
+        DataService.ds.addProfileInfo(uid: id, userData: post)
         
         usernameTxt.text = ""
         settingsImgSelected = false
