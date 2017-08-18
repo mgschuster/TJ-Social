@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class SettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var usernameTxt: FancyField!
     @IBOutlet weak var profilePicture: CircleView!
@@ -23,6 +23,13 @@ class SettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         settingsImgPicker.allowsEditing = true
         settingsImgPicker.delegate = self
         
+        usernameTxt.delegate = self
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -37,7 +44,7 @@ class SettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     }
     
     @IBAction func setUsernameBtn(_ sender: Any) {
-        
+        performSegue(withIdentifier: SETTINGS_TO_FEED, sender: nil)
     }
     
     @IBAction func profileImgTapped(_ sender: Any) {

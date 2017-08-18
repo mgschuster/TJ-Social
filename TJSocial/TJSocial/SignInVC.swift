@@ -105,6 +105,6 @@ class SignInVC: UIViewController, UITextFieldDelegate {
         let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
         print("MITCHELL: Data saved to keychain \(keychainResult)")
         self.emailWarning.text = ""
-        performSegue(withIdentifier: SEGUE_FEED, sender: nil)
+        performSegue(withIdentifier: SETTINGS_FEED, sender: nil)
     }
 }

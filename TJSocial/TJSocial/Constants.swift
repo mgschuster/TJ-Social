@@ -13,3 +13,5 @@ let SHADOW_GRAY: CGFloat = 120.0 / 255.0
 let KEY_UID = "uid"
 
 let SEGUE_FEED = "goToFeed"
+let SETTINGS_FEED = "goToSettings"
+let SETTINGS_TO_FEED = "settingsToFeed"
